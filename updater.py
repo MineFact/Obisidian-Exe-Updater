@@ -4,6 +4,11 @@ import glob
 import shutil
 import sys
 
+def wait_for_user_input():
+    # Wait for the user to read the message
+    print("Press any key to exit...")
+    input()
+
 def is_running_as_exe():
     # Checks if the script is running as a compiled executable
     return getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS')
@@ -65,6 +70,7 @@ def replace_latest_obsidian(releases_url, local_exe_path, directory):
     is_latest_release = download_latest_obsidian(releases_url, local_exe_path, directory)
 
     if is_latest_release:
+        wait_for_user_input()
         return
     
     try:
@@ -75,6 +81,7 @@ def replace_latest_obsidian(releases_url, local_exe_path, directory):
         print("Replacement complete. New version updated.")
     except Exception as e:
         print(f"Error during file replacement: {e}")
+        wait_for_user_input()
 
 releases_url = "https://api.github.com/repos/obsidianmd/obsidian-releases/releases"
 

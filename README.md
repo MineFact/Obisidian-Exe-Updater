@@ -36,5 +36,5 @@ Please make sure to update tests as appropriate and follow the coding style conv
 1. This script assumes that the Obsidian releases are hosted on GitHub and that the executable is named in the format `Obsidian*.exe`. If the hosting service or naming convention changes, the script may need to be updated.
 2. Currently only a Windows exe is included in the realease. If you want to have an executable for another operating system you can create it yourself by cloning the repository and using pyinstaller to create an executable for your operating system:
 ```bash
-pyinstaller --onefile --icon=updater.ico updater.py
+pyinstaller --onefile --icon=updater.ico --name ObsidianUpdater updater.py
 ```
