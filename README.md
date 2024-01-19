@@ -1,6 +1,6 @@
 
 
-This Python script is used to automatically update the official Obsidian.1.X.X.exe<br> It fetches the latest release from GitHub, downloads it, and replaces the old executable. <br>If no Obsidian*.exe is found it downloads the latest one.
+This ObsidianUpdater is used to automatically update the official Obsidian.1.X.X.exe file.<br> It fetches the latest release from GitHub, downloads it, and replaces the old executable. <br>If no Obsidian*.exe is found it downloads the latest one.
 
 ## Installation
 
